@@ -63,7 +63,7 @@ export default function Sidebar({
           <div className="flex flex-col h-full">
             <div className="p-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-ppneue text-gray-900">Chat History</h2>
+                <h2 className="text-lg text-gray-900">Chatverlauf</h2>
                 {!isMobile && (
                   <kbd className="px-2 py-1 text-xs font-semibold text-gray-500 bg-gray-100 rounded-md">
                     ⌘K
@@ -85,7 +85,7 @@ export default function Sidebar({
                     }`}
                   >
                     <motion.div
-                      className={`inline-block p-4 rounded-xl font-ppsupply ${
+                      className={`inline-block p-4 rounded-xl ${
                         message.role === 'user'
                           ? 'bg-[#FF3B00] text-white'
                           : 'bg-gray-100 text-gray-900'
@@ -107,8 +107,8 @@ export default function Sidebar({
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF3B00] focus:border-transparent font-ppsupply"
-                placeholder="Type a message..."
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF3B00] focus:border-transparent"
+                placeholder="Nachricht eingeben..."
               />
               {!isMobile && (
                 <div className="absolute right-8 bottom-9 flex items-center gap-1 text-xs text-gray-400">

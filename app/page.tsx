@@ -11,7 +11,7 @@ const Tooltip = ({ children, text }: { children: React.ReactNode; text: string }
   return (
     <div className="relative group">
       {children}
-      <span className="absolute hidden group-hover:block w-auto px-3 py-2 min-w-max left-1/2 -translate-x-1/2 translate-y-3 bg-gray-900 text-white text-xs rounded-md font-ppsupply">
+      <span className="absolute hidden group-hover:block w-auto px-3 py-2 min-w-max left-1/2 -translate-x-1/2 translate-y-3 bg-gray-900 text-white text-xs rounded-md">
         {text}
       </span>
     </div>
@@ -85,7 +85,7 @@ export default function Home() {
                 width={32}
                 height={32}
               />
-              <span className="font-ppsupply text-gray-900">Open Operator</span>
+              <span className="text-gray-900">Open Operator</span>
             </div>
             <div className="flex items-center gap-2">
               <a
@@ -101,7 +101,7 @@ export default function Home() {
                     height={20}
                     className="mr-2"
                   />
-                  View GitHub
+                  GitHub
                 </button>
               </a>
             </div>
@@ -112,13 +112,13 @@ export default function Home() {
             <div className="w-full max-w-[640px] bg-white border border-gray-200 shadow-sm">
               <div className="w-full h-12 bg-white border-b border-gray-200 flex items-center px-4">
                 <div className="flex items-center gap-2">
-                  <Tooltip text="why would you want to close this?">
+                  <Tooltip text="Warum würdest du das schließen wollen?">
                     <div className="w-3 h-3 rounded-full bg-red-500" />
                   </Tooltip>
-                  <Tooltip text="s/o to the 🅱️rowserbase devs">
+                  <Tooltip text="KI-gesteuerte Websuche">
                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
                   </Tooltip>
-                  <Tooltip text="@pk_iv was here">
+                  <Tooltip text="Open Source">
                     <div className="w-3 h-3 rounded-full bg-green-500" />
                   </Tooltip>
                 </div>
@@ -126,11 +126,11 @@ export default function Home() {
 
               <div className="p-8 flex flex-col items-center gap-8">
                 <div className="flex flex-col items-center gap-3">
-                  <h1 className="text-2xl font-ppneue text-gray-900 text-center">
+                  <h1 className="text-2xl text-gray-900 text-center">
                     Open Operator
                   </h1>
-                  <p className="text-base font-ppsupply text-gray-500 text-center">
-                    Hit run to watch AI browse the web.
+                  <p className="text-base text-gray-500 text-center">
+                    Starten Sie und sehen Sie zu, wie KI das Web durchsucht.
                   </p>
                 </div>
 
@@ -151,62 +151,48 @@ export default function Home() {
                     <input
                       name="message"
                       type="text"
-                      placeholder="What's the price of NVIDIA stock?"
-                      className="w-full px-4 py-3 pr-[100px] border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF3B00] focus:border-transparent font-ppsupply"
+                      placeholder="Wie ist der aktuelle Kurs der NVIDIA Aktie?"
+                      className="w-full px-4 py-3 pr-[100px] border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF3B00] focus:border-transparent"
                     />
-                    <AnimatedButton type="submit">Run</AnimatedButton>
+                    <AnimatedButton type="submit">Start</AnimatedButton>
                   </div>
                 </form>
                 <div className="grid grid-cols-2 gap-3 w-full">
                   <button
                     onClick={() =>
                       startChat(
-                        "Who is the top GitHub contributor to Stagehand by Browserbase?"
+                        "Wie ist das aktuelle Wetter in Berlin?"
                       )
                     }
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors text-left"
                   >
-                    Who is the top contributor to Stagehand?
+                    Wie ist das Wetter in Berlin?
                   </button>
                   <button
                     onClick={() =>
-                      startChat("How many wins do the 49ers have?")
+                      startChat("Wie viele Bundesliga-Tore hat Bayern München diese Saison?")
                     }
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors text-left"
                   >
-                    How many wins do the 49ers have?
+                    Bayern München Tore diese Saison?
                   </button>
                   <button
-                    onClick={() => startChat("What is Stephen Curry's PPG?")}
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    onClick={() => startChat("Was ist der aktuelle DAX Stand?")}
+                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors text-left"
                   >
-                    What is Stephen Curry&apos;s PPG?
+                    Aktueller DAX Stand?
                   </button>
                   <button
-                    onClick={() => startChat("How much is NVIDIA stock?")}
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    onClick={() => startChat("Wie ist der NVIDIA Aktienkurs?")}
+                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors text-left"
                   >
-                    How much is NVIDIA stock?
+                    NVIDIA Aktienkurs?
                   </button>
                 </div>
               </div>
             </div>
-            <p className="text-base font-ppsupply text-center mt-8">
-              Powered by{" "}
-              <a
-                href="https://stagehand.dev"
-                className="text-yellow-600 hover:underline"
-              >
-                🤘 Stagehand
-              </a>{" "}
-              on{" "}
-              <a
-                href="https://browserbase.com"
-                className="text-[#FF3B00] hover:underline"
-              >
-                🅱️ Browserbase
-              </a>
-              .
+            <p className="text-base text-center mt-8">
+              Ein Open Source Projekt für KI-gesteuerte Websuche
             </p>
           </main>
         </div>

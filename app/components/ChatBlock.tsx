@@ -154,15 +154,15 @@ export default function ChatBlock({
                     {isSidebarOpen ? "←" : "→"}
                   </motion.button>
                 )}
-                <h2 className="text-lg font-ppneue text-gray-900">Browser</h2>
+                <h2 className="text-lg text-gray-900">Browser</h2>
               </div>
               <motion.button
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors font-ppsupply"
+                className="p-2 hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Close
+                Schließen
               </motion.button>
             </motion.div>
 
@@ -185,16 +185,16 @@ export default function ChatBlock({
                   </div>
                   {/* Navigation Bar */}
                   <div className="h-12 flex items-center px-4 gap-4">
-                    <button className="text-gray-400 hover:text-gray-600 font-ppsupply">
+                    <button className="text-gray-400 hover:text-gray-600">
                       ←
                     </button>
-                    <button className="text-gray-400 hover:text-gray-600 font-ppsupply">
+                    <button className="text-gray-400 hover:text-gray-600">
                       →
                     </button>
-                    <button className="text-gray-400 hover:text-gray-600 font-ppsupply">
+                    <button className="text-gray-400 hover:text-gray-600">
                       ↻
                     </button>
-                    <div className="flex-1 px-4 py-1.5 bg-gray-100 text-sm text-gray-600 font-ppsupply">
+                    <div className="flex-1 px-4 py-1.5 bg-gray-100 text-sm text-gray-600">
                       {currentUrl || "about:blank"}
                     </div>
                   </div>
